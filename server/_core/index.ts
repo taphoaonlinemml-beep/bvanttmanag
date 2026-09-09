@@ -31,25 +31,41 @@ async function findAvailablePort(startPort: number = 3000): Promise<number> {
 
 async function startServer() {
   const app = express();
-  // Thêm đoạn cấu hình CORS này
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-  
-  if (req.method === "OPTIONS") {
-    res.sendStatus(200);
-    return;
-  }
-  next();
-});
-  const server = createServer(app);
+
+  // === CẤU HÌNH CORS CHUẨN CHO TRPC VÀ FIREBASE HOSTING ===
+  app.use((req, res, next) => {
+    const origin = req.headers.origin;
+    if (origin) {
+      res.setHeader("Access-Control-Allow-Origin", origin);
+    } else {
+      res.setHeader("Access-Control-Allow-Origin", "*");
+    }
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, PUT, DELETE, OPTIONS"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept, Authorization, x-trpc-source"
+    );
+
+    // Trả về 200/204 ngay lập tức cho các request Preflight OPTIONS
+    if (req.method === "OPTIONS") {
+      res.sendStatus(204);
+      return;
+    }
+    next();
+  });
+
   // Configure body parser with larger size limit for file uploads
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
+
   registerStorageProxy(app);
   registerOAuthRoutes(app);
   app.use("/api/mobile-sync", createMobileSyncRouter());
+
   // tRPC API
   app.use(
     "/api/trpc",
@@ -58,6 +74,7 @@ app.use((req, res, next) => {
       createContext,
     })
   );
+
   // development mode uses Vite, production mode uses static files
   if (process.env.NODE_ENV === "development") {
     await setupVite(app, server);
@@ -71,6 +88,8 @@ app.use((req, res, next) => {
   if (port !== preferredPort) {
     console.log(`Port ${preferredPort} is busy, using port ${port} instead`);
   }
+
+  const server = createServer(app);
 
   server.listen(port, () => {
     console.log(`Server running on http://localhost:${port}/`);
