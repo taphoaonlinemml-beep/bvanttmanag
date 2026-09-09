@@ -1,0 +1,169 @@
+# Project TODO
+
+- [x] Thiết lập chủ đề giao diện dashboard navy–đỏ, kiểu chữ, trạng thái responsive và khả năng truy cập cơ bản.
+- [x] Tích hợp luồng đăng nhập hiện có, phân tách quyền Admin và User ở giao diện lẫn API.
+- [x] Tạo mô hình dữ liệu cho đơn vị/tổ, hồ sơ nhân sự, tệp/ảnh hồ sơ và nhật ký sao lưu.
+- [x] Áp dụng migration cơ sở dữ liệu cho các thực thể nghiệp vụ.
+- [x] Xây dựng API quản lý đơn vị/tổ: tạo, xem, sửa, xóa với bảo vệ quyền Admin.
+- [x] Xây dựng API quản lý nhân sự: danh sách, tra cứu đa điều kiện, tạo, sửa, xóa và tự tính tuổi/thời gian công tác/trạng thái.
+- [x] Tích hợp lưu ảnh thẻ và tệp hồ sơ qua S3, kèm cập nhật/xem ảnh trong hồ sơ.
+- [x] Xây dựng chức năng đọc, kiểm tra lỗi và nhập hàng loạt hồ sơ từ tệp Excel .xlsx.
+- [x] Xây dựng chức năng xuất danh sách nhân sự có lọc ra tệp Excel .xlsx.
+- [x] Phát triển dashboard có sidebar và các trang: Tổng quan, Danh sách nhân sự, Đơn vị/tổ, Kết quả chính sách, Backup & dữ liệu, Cài đặt.
+- [x] Phát triển biểu đồ tổng hợp theo đơn vị và trạng thái; thiết lập bộ lọc theo tên, đơn vị, chức vụ, trạng thái.
+- [x] Triển khai hành vi tự chuyển trạng thái “Thôi tham gia” khi cập nhật ngày thôi tham gia.
+- [x] Viết và chạy kiểm thử Vitest cho các quy tắc nghiệp vụ, phân quyền và quy ước dữ liệu.
+- [x] Kiểm tra giao diện desktop/mobile, rà soát lỗi biên dịch và hoàn thiện bàn giao.
+- [x] Tạo bảng và migration nhật ký backup/restore, bao gồm loại thao tác, thời điểm, người thực hiện, trạng thái và tệp liên quan.
+- [x] Bổ sung API ghi nhận và tra cứu nhật ký backup/restore cho khu vực quản trị.
+- [x] Tăng cường kiểm tra header Excel, đơn vị không tồn tại và dữ liệu ngày/CCCD khi nhập hàng loạt.
+- [x] Bổ sung Vitest cho các trường hợp hợp lệ và lỗi của quy ước nhập Excel.
+- [x] Hoàn thiện tài liệu hướng dẫn sử dụng và tạo checkpoint bàn giao.
+- [x] Tạo checkpoint bàn giao sau khi chốt toàn bộ mã nguồn, migration, kiểm thử và tài liệu.
+- [x] Mở rộng API danh sách nhân sự với nhóm tuổi dưới 70/từ 70 tuổi và trạng thái hoạt động.
+- [x] Bổ sung vùng lọc nâng cao trên danh sách nhân sự theo nhóm tuổi, đơn vị và trạng thái; giữ đồng bộ với xuất Excel.
+- [x] Viết kiểm thử quy tắc lọc tuổi và xác minh giao diện bộ lọc nâng cao trên desktop/mobile.
+- [x] Thay toàn bộ nhãn “Đơn vị cha” trên giao diện quản lý đơn vị thành “Tên xã, phường”.
+- [x] Tạo mẫu Excel danh mục gồm các cột “Tên xã, phường” và “Tên đơn vị/tổ” để cập nhật dữ liệu chuẩn.
+- [x] Kiểm thử chức năng tạo file mẫu và xác minh giao diện quản lý đơn vị sau điều chỉnh.
+- [x] Xây dựng quy tắc kiểm tra template Excel danh mục, tên xã/phường và tên đơn vị/tổ trùng lặp.
+- [x] Tạo API Admin để nhập hàng loạt danh mục xã/phường và đơn vị/tổ từ tệp Excel hợp lệ.
+- [x] Bổ sung giao diện chọn tệp, hiển thị kết quả nhập và tải báo cáo lỗi theo dòng.
+- [x] Viết kiểm thử nhập danh mục Excel và xác minh giao diện desktop/mobile.
+- [x] Thực hiện nhập danh mục Excel theo giao dịch nguyên tử để tránh dữ liệu nhập dở dang khi có lỗi.
+- [x] Bổ sung vùng kết quả nhập hiển thị số xã/phường, đơn vị/tổ, tên file và trạng thái xử lý.
+- [x] Mở rộng kiểm thử cho ca nhập có dữ liệu, dòng trùng trong file và đơn vị/tổ đã tồn tại.
+- [x] Điều chỉnh thuật ngữ hiển thị “Tổ/Đội” thành “Tổ” trên các phân hệ liên quan.
+- [x] Bổ sung trường số lượng thành viên tối đa cho đơn vị loại Tổ trong cơ sở dữ liệu và API.
+- [x] Liên kết xã/phường–Tổ–thành viên, tính quân số thực tế, số còn trống và cảnh báo vượt định mức.
+- [x] Cập nhật biểu mẫu, danh mục, nhập Excel và thống kê quân số Tổ theo xã/phường.
+- [x] Viết kiểm thử định mức Tổ và xác minh giao diện desktop/mobile.
+- [x] Ràng buộc hồ sơ nhân sự chỉ được gắn vào đơn vị loại Tổ trong tạo, sửa và nhập Excel.
+- [x] Bổ sung liên kết dữ liệu tự tham chiếu cho đơn vị và kiểm tra Tổ phải trực thuộc xã/phường.
+- [x] Mở rộng kiểm thử gán/chuyển nhân sự vào Tổ và cập nhật quân số theo định mức.
+- [x] Viết kiểm thử tích hợp quân số theo Tổ khi tạo, cập nhật, xóa hoặc chuyển hồ sơ nhân sự.
+- [x] Bổ sung kiểm thử nhập Excel nhân sự vào Tổ hợp lệ và xác nhận cảnh báo định mức quân số.
+- [x] Viết kiểm thử tích hợp API quân số Tổ sau tạo, sửa, xóa và chuyển hồ sơ nhân sự.
+- [x] Kiểm thử nhập Excel làm chạm hoặc vượt định mức Tổ và xác nhận trạng thái cảnh báo quân số.
+- [x] Viết kiểm thử end-to-end API: tạo, sửa, xóa, chuyển hồ sơ và đọc lại quân số từ `units.staffing`.
+- [x] Kiểm thử API quân số Tổ bằng implementation thống kê thật và nguồn dữ liệu executor kiểm thử dùng chung với mutation nhân sự.
+- [x] Chẩn đoán mutation trang Đơn vị/Tổ trả về HTML thay vì phản hồi JSON của tRPC.
+- [x] Khắc phục luồng API/định tuyến gây phản hồi HTML và kiểm thử thao tác quản trị đơn vị.
+- [x] Tối ưu nhập danh mục Excel theo lô trong giao dịch để tệp lớn không vượt thời gian chờ gateway.
+- [x] Kiểm thử trực tiếp mutation `units.importCatalog` với tệp Excel lớn và xác nhận phản hồi JSON tRPC hợp lệ.
+- [x] Gửi request HTTP thực tới endpoint tRPC nhập danh mục lớn và xác nhận phản hồi JSON, không còn lỗi 504/HTML.
+- [x] Gửi request HTTP thực với 200+ dòng danh mục hợp lệ, không thay đổi dữ liệu hiện có, để xác nhận không còn 504/HTML.
+- [x] Bổ sung thanh tiến trình trực quan cho các bước đọc tệp, kiểm tra dữ liệu và nhập danh mục Excel.
+- [x] Hiển thị trạng thái hoàn tất/lỗi, khóa thao tác trùng và kiểm thử giao diện thanh tiến trình trên desktop/mobile.
+- [x] Xác minh trực quan thanh tiến trình trên desktop/mobile trong trạng thái đang xử lý, hoàn tất và lỗi.
+- [x] Bổ sung kiểm thử quy tắc khóa nút nhập khi tiến trình đang chạy và thông điệp hoàn tất/lỗi.
+- [x] Xác minh trực quan thanh tiến trình ở các trạng thái đang xử lý, hoàn tất và lỗi trên desktop/mobile.
+- [x] Chẩn đoán lỗi đọc `insertId` trong thao tác nhập danh mục Excel theo lô.
+- [x] Sửa cơ chế tạo và ánh xạ xã/phường mới sau chèn theo lô; kiểm thử API nhập danh mục.
+- [x] Kiểm thử route `units.importCatalog` với dữ liệu tạo mới xã/phường và Tổ sau bản sửa `insertId`.
+- [x] Kiểm thử tích hợp nhập danh mục thật với tạo mới xã/phường và nhiều Tổ, không phụ thuộc kết quả `insertId` theo từng dòng.
+- [x] Thay cơ chế nhập danh mục xã/phường–Tổ thành thay thế danh sách cũ an toàn, đồng thời bảo toàn ràng buộc hồ sơ nhân sự.
+- [x] Đối soát và điều chỉnh thống kê tổng số đơn vị/Tổ trên bảng tổng quan theo dữ liệu danh mục hiện hành.
+- [x] Đối soát tệp Excel danh mục nguồn với bảng `units` để xác định chính xác Tổ dư gây chênh lệch 1.400 và 1.401.
+- [x] Phân tích trực tiếp QD124.xlsx, đối chiếu từng khóa xã/phường–Tổ và lập kết quả chênh lệch trước khi thay thế dữ liệu thật.
+- [x] Mở rộng thay thế danh mục để phát hiện Tổ cũ không liên kết xã/phường và chặn xóa khi đang gắn hồ sơ nhân sự.
+- [x] Xóa hồ sơ thử nghiệm Đinh Văn Bằng theo xác nhận trực tiếp của người dùng.
+- [x] Thay thế danh mục thực tế bằng tệp Excel đã đối soát và xác nhận lại số Tổ hiển thị trên bảng Tổng quan.
+- [x] Bổ sung kiểm thử thống kê `dashboard.stats` cho số Tổ và xã/phường tách biệt.
+- [x] Mở rộng số liệu Tổng quan theo xã/phường cho Treemap: quân số đang tham gia, số Tổ, định mức và tỷ lệ bình quân người/Tổ.
+- [x] Thay biểu đồ Phân bổ theo đơn vị bằng Treemap responsive, có nhãn hai lớp, tooltip chi tiết và màu thể hiện tình trạng quân số.
+- [x] Thay mục Trạng thái tham gia bằng biểu đồ cột ngang Kết quả xây dựng lực lượng theo chức vụ, độ tuổi, giới tính và trình độ.
+- [x] Bổ sung kiểm thử thống kê và xác minh giao diện desktop/mobile cho hai biểu đồ Tổng quan mới.
+- [x] Thiết kế liên kết tài khoản người dùng với một xã/phường để giới hạn dữ liệu theo địa bàn.
+- [x] Áp dụng phân quyền API và giao diện: Admin toàn quyền, người dùng xã/phường chỉ xem và điều chỉnh dữ liệu địa bàn được giao.
+- [x] Viết hướng dẫn xuất bản, mời người dùng đăng nhập và quản lý quyền truy cập theo xã/phường.
+- [x] Bổ sung vai trò Lãnh đạo chỉ xem toàn bộ dữ liệu, không có quyền tạo, sửa, xóa hoặc thay đổi cài đặt.
+- [x] Giới hạn User xã/phường chỉ tạo và cập nhật hồ sơ/tệp/kết quả chính sách của một xã/phường được phân công; chặn toàn bộ thao tác xóa.
+- [x] Tạo giao diện Admin gán một xã/phường cho mỗi User và hiển thị rõ phạm vi quyền.
+- [x] Hợp nhất API cập nhật quyền để luôn kiểm tra User được gán đúng đơn vị loại xã/phường.
+- [x] Hiển thị trạng thái hướng dẫn riêng cho User chưa được Admin phân công xã/phường, thay cho lỗi truy vấn rời rạc.
+- [x] Tạo và đóng gói kỹ năng tái sử dụng cho quy trình phát triển hệ thống quản lý lực lượng ANTT cơ sở.
+- [x] Bổ sung dữ liệu và API yêu cầu xóa hồ sơ: User xã/phường nêu lý do, Admin xem xét, từ chối hoặc thực hiện xóa.
+- [x] Xây dựng giao diện gửi yêu cầu xóa trong hồ sơ và hàng đợi xử lý cho Admin.
+- [x] Kiểm thử phân quyền, trạng thái yêu cầu xóa và xác minh giao diện desktop/mobile.
+- [x] Kiểm thử đầy đủ trạng thái yêu cầu xóa: tạo, chặn trùng, từ chối và thực hiện xóa có lưu vết.
+- [x] Xác minh desktop/mobile nút và hộp thoại Yêu cầu xóa trong hồ sơ nhân sự bằng kiểm thử render giao diện; xác minh hàng đợi Admin trực quan trên desktop/mobile.
+- [x] Bàn giao kỹ năng tái sử dụng dưới dạng tệp đính kèm theo quy trình skill-creator.
+- [x] Kiểm thử tích hợp tRPC/DB cho tạo yêu cầu, chặn pending trùng, Admin từ chối và Admin thực hiện xóa có lưu vết.
+- [x] Xác minh trực quan trang hồ sơ nhân sự với nút và hộp thoại Yêu cầu xóa trên desktop/mobile.
+- [x] Bổ sung lưu trữ tệp minh chứng cho từng yêu cầu xóa và API upload/xem theo quyền.
+- [x] Chuẩn hóa nhãn, loại tệp và khu vực đính kèm Quyết định tham gia, Quyết định cho thôi tham gia trong hồ sơ.
+- [x] Cho phép User xã/phường tải tệp minh chứng và quyết định trong phạm vi được phân công; giữ quyền gỡ tệp cho Admin.
+- [x] Kiểm thử phân quyền, loại tệp và xác minh giao diện desktop/mobile cho các khu vực đính kèm mới.
+- [x] Kiểm thử uploadEvidence chặn sai vai trò, chưa được gán địa bàn, MIME không hợp lệ và tệp vượt giới hạn dung lượng.
+- [x] Xác minh desktop/mobile các khu vực đính kèm Quyết định tham gia, Quyết định cho thôi tham gia và minh chứng trong trang hồ sơ.
+- [x] Bổ sung kiểm thử uploadEvidence chặn vai trò Admin.
+- [x] Xác minh desktop/mobile hộp hồ sơ với quyết định tham gia, cho thôi tham gia và hộp minh chứng bằng dữ liệu kiểm thử tự dọn dẹp.
+- [x] Tạo dữ liệu kiểm thử tạm thời, mở trực tiếp hộp hồ sơ và hộp minh chứng trên desktop/mobile, rồi khôi phục dữ liệu và quyền ban đầu.
+- [x] Xác minh mobile hộp hồ sơ và hộp yêu cầu xóa bằng dữ liệu tạm thời, rồi khôi phục lại dữ liệu và quyền ban đầu.
+- [x] Bổ sung bộ lọc danh sách hồ sơ theo xã/phường và xuất Excel theo bộ lọc cho Admin, Lãnh đạo.
+- [x] Chặn User xã/phường dùng bộ lọc/xuất tổng hợp ngoài địa bàn được phân công.
+- [x] Đối soát toàn bộ bảng và thống kê liên quan đến Tổ, xác định dữ liệu vượt 1.400 và đề xuất xóa an toàn nếu có.
+- [x] Cập nhật hướng dẫn về lưu trữ dữ liệu, truy cập tệp và phương án kết nối Google Drive cá nhân.
+- [x] Điều chỉnh quyền xuất Excel: User xã/phường tải được dữ liệu trong địa bàn được phân công; Lãnh đạo và Admin tải được dữ liệu một, nhiều hoặc toàn bộ xã/phường.
+- [x] Mở rộng bộ lọc và xuất Excel để Admin/Lãnh đạo chọn nhiều xã/phường cụ thể, ngoài lựa chọn một hoặc toàn bộ địa bàn.
+- [x] Cập nhật kiểm thử và hướng dẫn cho ba phạm vi xuất: User đúng địa bàn; Admin/Lãnh đạo một xã/phường; Admin/Lãnh đạo nhiều hoặc toàn bộ xã/phường.
+- [x] Bổ sung hồi quy API cho Admin và Lãnh đạo xuất Excel theo đúng một xã/phường sau khi mở rộng chọn nhiều địa bàn.
+- [x] Làm rõ và bổ sung quy trình Admin phân loại, phân quyền User xã/phường và Lãnh đạo khi tài khoản đăng nhập lần đầu.
+- [x] Bổ sung biểu mẫu/câu hỏi quản trị để Admin xác định vai trò và xã/phường được phân công cho từng tài khoản.
+- [x] Rà soát và triển khai endpoint `/api/mobile-sync/v1/personnel` theo hợp đồng Mobile Sync được xác nhận.
+- [x] Tạo mô hình tài khoản nội bộ với tên đăng nhập, mật khẩu băm, vai trò và xã/phường do Admin phân công.
+- [x] Bổ sung màn hình Admin tạo, lọc và cấp lại mật khẩu tạm cho tài khoản nội bộ User/Lãnh đạo.
+- [x] Triển khai `GET /api/mobile-sync/v1/personnel` với Authorization Bearer, `updatedSince`, `cursor`, `limit`, phản hồi `data`/`nextCursor` và lỗi 401 chuẩn hóa.
+- [x] Viết kiểm thử bảo mật và hợp đồng cho tài khoản nội bộ và Mobile Sync.
+- [x] Hoàn thiện luồng mật khẩu tạm: bắt buộc User/Lãnh đạo đổi mật khẩu trước khi dùng nghiệp vụ sau khi Admin tạo hoặc cấp lại mật khẩu.
+- [x] Bổ sung API và giao diện đổi mật khẩu lần đầu cho tài khoản nội bộ, gồm kiểm tra mật khẩu hiện tại và độ mạnh mật khẩu mới.
+- [x] Mở rộng kiểm thử các API đăng nhập, tạo/cấp lại mật khẩu nội bộ và giới hạn chỉ Admin được thực hiện thao tác quản trị tài khoản.
+- [x] Áp dụng quy tắc độ mạnh mật khẩu nội bộ ở API và hiển thị hướng dẫn/đánh giá trực tiếp trên giao diện đổi mật khẩu.
+- [x] Chẩn đoán và khắc phục lỗi nhập dữ liệu từ file Excel mẫu, gồm tái hiện lỗi, kiểm thử dữ liệu hợp lệ/lỗi và cải thiện thông báo nếu cần.
+- [x] Bổ sung dropdown Xã/Phường và Tên Tổ liên kết trong file Excel mẫu nhập nhân sự, kèm kiểm thử và hướng dẫn sử dụng.
+- [x] Khắc phục dropdown Tên Tổ không hiển thị theo Xã/Phường và lỗi `parse_date_code` khi nhập dữ liệu từ file Excel mẫu; chuẩn hóa dữ liệu mẫu và kiểm thử lại toàn bộ luồng nhập.
+- [x] Đóng gói quy trình chuẩn hóa file Excel, dropdown Xã/Phường–Tên Tổ và đọc ngày Excel thành kỹ năng tái sử dụng, xác thực và bàn giao.
+- [x] Đối soát và khắc phục lỗi nhập Excel về CCCD, liên kết Xã/Phường–Tổ; bổ sung báo cáo và hướng dẫn xử lý lỗi theo dòng.
+- [x] Chẩn đoán và khắc phục lỗi ghi hồ sơ nhân sự từ file Excel, chuyển lỗi cơ sở dữ liệu thành báo cáo theo dòng dễ xử lý.
+- [x] Đối soát và khắc phục lỗi nhận diện Xã An Hòa–Thôn Xuân Phong Tây, đồng thời cải thiện xử lý dòng thiếu Tổ khi nhập Excel.
+- [x] Thiết kế và triển khai đối soát/ánh xạ Tổ hàng loạt để nhập hàng nghìn hồ sơ mà không yêu cầu sửa từng dòng Excel.
+- [x] Đóng gói quy trình đối soát Tổ theo nhóm, ánh xạ hàng loạt và nhập Excel theo lô thành kỹ năng tái sử dụng, xác thực và bàn giao.
+- [x] Chuẩn hóa thuật ngữ “Tổ” thành “Tổ bảo vệ an ninh, trật tự” và điều chỉnh trường Thôn/Tổ dân phố thành gợi ý cho Địa chỉ.
+- [x] Chuyển User địa bàn sang chỉ xem/tải dữ liệu, bổ sung yêu cầu–phê duyệt và công tắc Admin mở/đóng quyền chỉnh sửa theo địa bàn.
+- [x] Tạo hai báo cáo Excel: tổng hợp lực lượng và chi tiết 135 xã/phường theo mẫu được cung cấp.
+- [x] Khắc phục hiển thị Treemap khi có dữ liệu nhân sự liên kết đúng với xã/phường.
+- [x] Đọc biểu mẫu BM1 và danh sách xã/phường đính kèm để xác định toàn bộ tiêu chí, cột và thứ tự báo cáo.
+- [x] Điều chỉnh báo cáo Excel thống kê: mỗi xã/phường một dòng theo đúng thứ tự danh sách đính kèm và các chỉ tiêu BM1 có dữ liệu nguồn.
+- [x] Giới hạn User xã/phường chỉ xuất báo cáo của địa bàn được giao; cho Admin/Lãnh đạo tích chọn một hoặc nhiều xã/phường để xuất báo cáo BM1.
+- [x] Bổ sung lựa chọn kỳ báo cáo BM1 theo ngày cố định hoặc khoảng ngày tự chọn; hiển thị 0 cho chỉ tiêu chưa có dữ liệu nguồn.
+- [x] Kiểm thử tệp báo cáo xuất, cập nhật hướng dẫn và lưu phiên bản triển khai.
+- [x] Thiết kế dữ liệu nhiều quyết định khen thưởng và nhiều đợt huấn luyện có số, ngày ban hành, cơ quan ban hành và tệp minh chứng.
+- [x] Bổ sung bốn mức xếp loại thành viên: Hoàn thành xuất sắc nhiệm vụ, Hoàn thành tốt nhiệm vụ, Hoàn thành nhiệm vụ và Không hoàn thành nhiệm vụ.
+- [x] Bổ sung API, phân quyền và biểu mẫu chi tiết hồ sơ để thêm/sửa/xóa từng quyết định hoặc đợt huấn luyện.
+- [x] Tổng hợp từng bản ghi khen thưởng, huấn luyện vào BM1; kiểm thử, cập nhật hướng dẫn và lưu phiên bản.
+- [x] Đối chiếu bản vá Mobile Sync Snapshot v1 với endpoint hiện có, dữ liệu nhân sự và mô hình phân quyền.
+- [x] Bổ sung bảng token Mobile Sync có băm SHA-256, phạm vi xã/phường, tạo/thu hồi và migration an toàn.
+- [x] Thay endpoint phân trang cũ bằng snapshot Mobile Sync v1, bổ sung API/giao diện Admin quản trị token một lần hiển thị.
+- [x] Kiểm thử hợp đồng token, phạm vi xã/phường và snapshot; cập nhật hướng dẫn, lưu checkpoint và xuất bản lại website.
+- [x] Xác định xã/phường thử nghiệm và tạo token Mobile Sync giới hạn theo địa bàn.
+- [x] Bổ sung nhật ký Mobile Sync ghi nhận thời điểm, token, phạm vi, trạng thái, số bản ghi và địa chỉ IP khi khả dụng.
+- [x] Hiển thị nhật ký đồng bộ tại Cài đặt, cập nhật hướng dẫn cấu hình ứng dụng di động và kiểm thử đầy đủ trước khi xuất bản.
+- [x] Cấp token thử Mobile Sync giới hạn theo xã/phường để kiểm tra phản hồi 200 và 403, rồi thu hồi theo xác nhận của người dùng.
+- [x] Xuất báo cáo tổng hợp dữ liệu lực lượng định kỳ theo biểu mẫu BM1 mới nhất cho toàn bộ xã/phường.
+- [x] Rà soát chi phí dịch vụ tối thiểu và soạn hướng dẫn tự host ứng dụng trên Google Cloud hoặc phương án miễn phí khác.
+- [x] Rút gọn bảng Danh sách hồ sơ còn Họ và tên, Đơn vị, Số điện thoại, Trạng thái; giữ nguyên đầy đủ trường ở biểu mẫu Thêm/Sửa.
+- [x] Kiểm tra và khắc phục luồng tạo tài khoản nội bộ cho User/Lãnh đạo; xác minh thao tác tạo, đăng nhập lần đầu và hướng dẫn quản trị viên.
+- [x] Khắc phục lỗi truy vấn cơ sở dữ liệu khi tạo tài khoản nội bộ User/Lãnh đạo và kiểm thử lại với thao tác tạo thực tế.
+- [x] Điều chỉnh mật khẩu tài khoản nội bộ còn tối thiểu 8 ký tự, bắt buộc đổi mật khẩu sau đăng nhập đầu và hiển thị hướng dẫn mật khẩu mạnh.
+- [x] Bổ sung cấu hình quyền mở rộng theo từng tài khoản Lãnh đạo để Admin tự chọn quyền bổ sung khi cần.
+- [x] Tạo 135 tài khoản User xã/phường theo danh mục, quy ước tên và tên đăng nhập đã yêu cầu; không ghi đè tài khoản nội bộ có sẵn.
+- [x] Tạo 09 tài khoản Lãnh đạo Công an tỉnh với tên đăng nhập canbo.ld02 đến canbo.ld10; không ghi đè tài khoản đã có.
+- [x] Kiểm thử đăng nhập, phạm vi địa bàn và phân quyền sau tạo hàng loạt; bàn giao danh sách thông tin đăng nhập an toàn.
+- [x] Bổ sung xuất Excel danh sách tài khoản nội bộ cho Admin, gồm thông tin bàn giao an toàn và không chứa mật khẩu.
+- [x] Khắc phục lỗi tRPC trả về HTML thay vì JSON khi tải dữ liệu trang Tổng quan.
+- [x] Bổ sung bộ lọc xã/phường và tên Tổ bảo vệ an ninh, trật tự cho trang Quân số Tổ theo xã/phường; kiểm thử lọc kết hợp và giao diện đáp ứng.
+- [ ] Bổ sung cột Xã/Phường và kết quả Khen thưởng/Tập huấn vào file Excel xuất từ Danh sách thành viên.
+- [ ] Hiển thị thêm cột Xã/Phường sau cột Đơn vị trong Danh sách hồ sơ.
+- [ ] Chuyển Quân số Tổ theo xã/phường sang dạng bảng danh sách giống Danh mục đơn vị.
+- [ ] Ẩn mục Danh mục đơn vị trên trang Đơn vị/Tổ nhưng không xóa dữ liệu hoặc quyền quản trị danh mục.

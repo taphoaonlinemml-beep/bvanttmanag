@@ -1,0 +1,118 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1786630672699,
+      "tag": "0000_daffy_praxagora",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1786630948681,
+      "tag": "0001_nebulous_mandrill",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1786631129810,
+      "tag": "0002_stormy_warpath",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1786637125847,
+      "tag": "0003_sweet_mother_askani",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1786637756231,
+      "tag": "0004_bumpy_wendigo",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1786679114961,
+      "tag": "0005_shallow_sugar_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1786681715929,
+      "tag": "0006_loving_fenris",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1786683110116,
+      "tag": "0007_ambiguous_expediter",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1787058283786,
+      "tag": "0008_slow_slapstick",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1787071818143,
+      "tag": "0009_overjoyed_orphan",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1787080050481,
+      "tag": "0010_outstanding_cammi",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "5",
+      "when": 1787121850608,
+      "tag": "0011_goofy_red_wolf",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "5",
+      "when": 1787121923820,
+      "tag": "0012_luxuriant_alice",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "5",
+      "when": 1787146723902,
+      "tag": "0013_military_hannibal_king",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "5",
+      "when": 1787148299264,
+      "tag": "0014_confused_silver_centurion",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "5",
+      "when": 1787506301865,
+      "tag": "0015_friendly_the_stranger",
+      "breakpoints": true
+    }
+  ]
+}

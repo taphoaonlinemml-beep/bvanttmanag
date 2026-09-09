@@ -1,0 +1,1 @@
+ALTER TABLE `units` ADD `maxMembers` int DEFAULT 0 NOT NULL;

@@ -1,0 +1,1 @@
+ALTER TABLE `personnel` MODIFY COLUMN `dateOfBirth` datetime;

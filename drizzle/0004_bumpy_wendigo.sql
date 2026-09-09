@@ -1,0 +1,1 @@
+ALTER TABLE `units` ADD CONSTRAINT `units_parent_fk` FOREIGN KEY (`parentId`) REFERENCES `units`(`id`) ON DELETE restrict ON UPDATE no action;

@@ -1,0 +1,1 @@
+-- Không có thay đổi cấu trúc bổ sung: migration 0011 đã được chuẩn hóa tên khóa ngoại.
